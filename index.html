@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Cloud Toilets</title>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Cloud Toilet</h1>
+
+        <div class="content">
+            
+            <form id ="add-toilet-form">
+                <input type="text" name="name" placeholder="Toilet name">
+                <input type="text" name="city" placeholder="Toilet city">
+                <button>Add Toilet</button>
+            </form>
+
+            <ul id ="toilet-list"></ul>
+
+        </div>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyBmFKT8b8L1DUoBEeAZcvqLQaaIcTJipnY",
+                authDomain: "aaro-ebe92.firebaseapp.com",
+                databaseURL: "https://aaro-ebe92-default-rtdb.firebaseio.com",
+                projectId: "aaro-ebe92",
+                storageBucket: "aaro-ebe92.appspot.com",
+                messagingSenderId: "1000930941024",
+                appId: "1:1000930941024:web:97d91a80a526dae6a28b05",
+                measurementId: "G-5PWB5P1QTK"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+        </script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
