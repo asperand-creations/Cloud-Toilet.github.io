@@ -28,11 +28,11 @@ function renderToilet(doc){
 }
 
 //getting data
-// db.collection('toilets').where('city', '==', 'Chennai').orderBy('name').get().then((snapshot) => {
-//     snapshot.docs.forEach(doc => {
-//         renderToilet(doc);       
-//     })
-// });
+db.collection('toilets').where('city', '==', 'Chennai').orderBy('name').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderToilet(doc);       
+    })
+});
 
 //saving data
 form.addEventListener('submit', (e) => {
